@@ -1,18 +1,38 @@
 package com.tugraz.asd.modernnewsgroupapp
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var spnTest : Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        spnTest = findViewById(R.id.spnTest) as Spinner
+
+//        val dropdown = findViewById<Spinner>(R.id.spnTest)
+
+        val items : MutableList<String> = ArrayList()
+
+        items.add("tu-graz.at.lv-oad")
+        items.add("tu-graz.at.lv-oad")
+        items.add("tu-graz.at.lv-oad")
+
+        val adapter :ArrayAdapter<String> = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, items)
+
+
+        spnTest.adapter = adapter
+
 
     }
 
@@ -32,3 +52,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
