@@ -39,6 +39,7 @@
         android:id="@+id/FragmentSubscribe"
         android:name="com.tugraz.asd.modernnewsgroupapp.FragmentSubscribe"
         android:label="Subscribe Fragment"
-        tools:layout="@layout/fragment_subscribe">
-    </fragment>
+        tools:layout="@layout/fragment_subscribe"></fragment>
+
+
 </navigation>
