@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.core.content.ContentProviderCompat
+import android.widget.AutoCompleteTextView
 import com.tugraz.asd.modernnewsgroupapp.databinding.FragmentFirstBinding
 
 /**
@@ -14,20 +14,14 @@ import com.tugraz.asd.modernnewsgroupapp.databinding.FragmentFirstBinding
  */
 class FirstFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
-    private val binding get() = _binding!!
-
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        val newsgroups = resources.getStringArray(R.array.newsgroups)
-        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, newsgroups)
-        //autoCompleteTextView.setAdapter(arrayAdapter)
 
-        return binding.root
+
+       return inflater.inflate(R.layout.first_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

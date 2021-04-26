@@ -5,50 +5,49 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgrey"
-    tools:context=".FragmentAddNewsgroup">
+    tools:context=".FragmentShowSubgroupsHeader">
 
 
     <LinearLayout
         android:id="@+id/simple_spinner_dropdown_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/lightgrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
 
 
         <TableRow
             android:layout_width="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_height="match_parent">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/settings" />
+                android:layout_margin="10dp"
+                android:background="@drawable/profile_icon" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="271dp"
-                android:layout_height="wrap_content">
-
-                <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:inputType="none"
-                    android:text="tu-graz.lv.asd" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:id="@+id/newsgroups_List"
+                android:layout_width="230dp"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:entries="@array/newsgroups"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/profile" />
+                android:layout_margin="10dp"
+                android:background="@drawable/halo" />
 
         </TableRow>
 

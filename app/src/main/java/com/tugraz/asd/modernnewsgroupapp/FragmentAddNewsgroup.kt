@@ -33,6 +33,8 @@ class FragmentAddNewsgroup : Fragment() {
         binding.buttonSubscribe.setOnClickListener() {
             onButtonSubscribeClick()
         }
+
+
         return view
     }
 

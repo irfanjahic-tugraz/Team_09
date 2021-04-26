@@ -1,27 +1,22 @@
 package com.tugraz.asd.modernnewsgroupapp
 
 import android.os.Bundle
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
-import com.tugraz.asd.modernnewsgroupapp.databinding.FragmentFirstBinding
-
+import android.view.View
+import android.widget.*
+import kotlinx.android.synthetic.main.fragment_show_subgroups_header.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -40,5 +35,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-

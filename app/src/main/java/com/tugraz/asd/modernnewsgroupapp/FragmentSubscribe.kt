@@ -13,9 +13,11 @@ import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.tugraz.asd.modernnewsgroupapp.databinding.FragmentAddNewsgroupBinding
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.tugraz.asd.modernnewsgroupapp.databinding.FragmentSubscribeBinding
 import com.tugraz.asd.modernnewsgroupapp.vo.Newsgroup
+import kotlinx.android.synthetic.main.fragment_subscribe.*
 
 
 /**
@@ -73,6 +75,8 @@ class FragmentSubscribe : Fragment() {
                 }
             }
         }
+        findNavController().navigate(R.id.action_FragmentSubscribe_to_fragmentShowSubgroupsHeader2)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

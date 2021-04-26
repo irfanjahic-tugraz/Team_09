@@ -18,6 +18,7 @@ class FragmentShowSubgroupsBody : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_show_subgroups_body, container, false)
     }
 

@@ -39,7 +39,16 @@
         android:id="@+id/FragmentSubscribe"
         android:name="com.tugraz.asd.modernnewsgroupapp.FragmentSubscribe"
         android:label="Subscribe Fragment"
-        tools:layout="@layout/fragment_subscribe"></fragment>
+        tools:layout="@layout/fragment_subscribe">
+        <action
+            android:id="@+id/action_FragmentSubscribe_to_fragmentShowSubgroupsHeader2"
+            app:destination="@id/fragmentShowSubgroupsHeader2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentShowSubgroupsHeader2"
+        android:name="com.tugraz.asd.modernnewsgroupapp.FragmentShowSubgroupsHeader"
+        android:label="fragment_show_subgroups_header"
+        tools:layout="@layout/fragment_show_subgroups_header" />
 
 
 </navigation>
